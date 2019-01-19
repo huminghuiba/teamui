@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TianZuUI</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" href="../../css/bootstrap.css" media="all">
+	<style type="text/css">
+		body{padding:15px 0;}
+
+		.error{
+			color:red;
+		}
+	</style>
+</head>
+<body>
+    <div class="container-fluid"> 
+    	<div class="row">
+    		<div class="col-md-12">
+    			<div class="panel panel-default">
+					<div class="panel-heading">
+					    <h3 class="panel-title">表单组合</h3>
+					</div>
+					<div class="panel-body">
+						<form id="commentForm" class="form-horizontal" method="get" action="">
+						<fieldset>
+							<div class="form-group">
+							    <label for="validate" class="col-sm-1 control-label">验证必填项</label>
+							    <div class="col-sm-11">
+							      <input type="text" class="form-control" name="validate" id="validate" required placeholder="验证必填项">
+							    </div>
+							</div>
+							<div class="form-group">
+							    <label for="title" class="col-sm-1 control-label">标题不少于5个字符</label>
+							    <div class="col-sm-11">
+							      <input type="text" class="form-control" name="title" id="title" minlength="5" required placeholder="标题不少于5个字符">
+							    </div>
+							</div>
+							
+						    <div class="form-group">
+							    <label for="phone" class="col-sm-1 control-label">验证手机</label>
+							    <div class="col-sm-5">
+							    	<input type="number"  class="form-control" name="phone" id="phone" minlength="11" required placeholder="验证手机">
+							    </div>
+							    <label for="email" class="col-sm-1 control-label">验证邮箱</label>
+							    <div class="col-sm-5">
+							    	<input type="email" class="form-control" name="email" id="email" required placeholder="验证邮箱">
+							    </div>
+						    </div>
+							<div class="form-group">
+							    <label for="more" class="col-sm-1 control-label">多规则验证</label>
+							    <div class="col-sm-3">
+							    	<input type="number" class="form-control" name="more" id="more" required placeholder="必须且数字">
+							    </div>
+							    <label for="date" class="col-sm-1 control-label">验证日期</label>
+							    <div class="col-sm-3">
+							    	<input type="date" class="form-control" name="date" id="date" required placeholder="验证日期">
+							    </div>
+							    <label for="link" class="col-sm-1 control-label">验证链接</label>
+							    <div class="col-sm-3">
+							    	<input type="url" class="form-control" name="link" id="link" required placeholder="验证链接">
+							    </div>
+						    </div> 
+							<div class="form-group">
+							    <label for="card" class="col-sm-1 control-label">验证身份证</label>
+							    <div class="col-sm-11">
+							      <input type="number" class="form-control" name="card" id="card" minlength="18" required placeholder="验证身份证">
+							    </div>
+							</div>
+							<div class="form-group">
+							    <label for="password" class="col-sm-1 control-label">自定义验证</label>
+							    <div class="col-sm-5">
+							      <input type="password" class="form-control" rangelength=[6,12] name="password"  id="password" required placeholder="请填写6到12位密码">
+							    </div>
+							    <div class="col-sm-6">
+							    	<p class="form-control-static">请填写6到12位密码</p>
+							    </div>
+							</div>
+							<div class="form-group">
+							    <label for="card" class="col-sm-1 control-label">单行选择框</label>
+							    <div class="col-sm-11">
+							        <select class="form-control">
+									  <option>1</option>
+									  <option>2</option>
+									  <option>3</option>
+									  <option>4</option>
+									  <option>5</option>
+									</select>
+							    </div>
+							</div>
+							<div class="form-group">
+							    <label for="card" class="col-sm-1 control-label">联动选择框</label>
+							    <div class="col-sm-2">
+							        <select class="form-control">
+									  <option>1</option>
+									  <option>2</option>
+									  <option>3</option>
+									  <option>4</option>
+									  <option>5</option>
+									</select>
+							    </div>
+							    <div class="col-sm-2">
+							        <select class="form-control">
+									  <option>1</option>
+									  <option>2</option>
+									  <option>3</option>
+									  <option>4</option>
+									  <option>5</option>
+									</select>
+							    </div>
+							    <div class="col-sm-2">
+							        <select class="form-control">
+									  <option>1</option>
+									  <option>2</option>
+									  <option>3</option>
+									  <option>4</option>
+									  <option>5</option>
+									</select>
+							    </div>
+							    <div class="col-sm-5">
+							        <p class="form-control-static">此处只是演示联动排版，并未做联动交互</p>
+								</div>
+							</div>
+							<div class="form-group">
+							    <label for="card" class="col-sm-1 control-label">原始复选框</label>
+							    <div class="col-sm-11">
+							        <label class="checkbox-inline">
+									    <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+									</label>
+									<label class="checkbox-inline">
+									     <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+									</label>
+									<label class="checkbox-inline">
+									     <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+									</label>
+							    </div>
+							</div>
+							<div class="form-group">
+							    <label for="card" class="col-sm-1 control-label">单选框</label>
+							    <div class="col-sm-11">
+							        <label class="radio-inline">
+									  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+									</label>
+									<label class="radio-inline">
+									  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+									</label>
+									<label class="radio-inline">
+									  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+									</label>
+							    </div>
+							</div>
+							<div class="form-group">
+							    <label for="card" class="col-sm-1 control-label">普通文本域</label>
+							    <div class="col-sm-11">
+							      <textarea class="form-control" name="common" required rows="3"></textarea>
+							    </div>
+							</div>
+							
+							<div class="form-group">
+							    <div class="col-sm-offset-1 col-sm-10">
+							      <input type="submit" value="提交" class=" submit btn btn-default">
+							    </div>
+							</div>
+						</fieldset>
+						</form>
+					
+					</div>
+				</div>
+
+    		</div>
+  			
+    	</div>
+    </div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/bootstrap.js"></script>
+<script src="../../js/jquery.validate.min.js"></script>
+<script src="../../js/messages_zh.js"></script>
+<script>
+	$.validator.setDefaults({
+	    submitHandler: function() {
+	      alert("提交事件!");
+	    }
+	});
+	$().ready(function() {
+	    $("#commentForm").validate();
+	});
+</script>
+</html>

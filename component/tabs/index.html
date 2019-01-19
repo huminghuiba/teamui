@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TianZuUI</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" href="../../css/bootstrap.css" media="all">
+	<style type="text/css">
+		body{padding:15px 0;}
+	</style>
+</head>
+<body>
+    <div class="container-fluid"> 
+    	<div class="row">
+    		<div class="col-md-12">
+    			<div class="panel panel-default">
+					<div class="panel-heading">
+					    <h3 class="panel-title">默认风格</h3>
+					</div>
+					<div class="panel-body">
+					    <div class="bs-example" >
+						    <ul class="nav nav-tabs" role="tablist">
+							    <li role="presentation" class="active">
+							    	<a href="#home"  role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">内容1</a>
+							    </li>
+							    <li role="presentation" class="">
+							    	<a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">内容2</a>
+							    </li>
+							    <li role="presentation" class="dropdown">
+							      	<a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents" aria-expanded="false">内容 <span class="caret"></span></a>
+								        <ul class="dropdown-menu" aria-labelledby="myTabDrop1" >
+								          	<li class=""><a href="#dropdown1" role="tab"  data-toggle="tab" aria-controls="dropdown1" aria-expanded="false">内容3</a></li>
+								          	<li class=""><a href="#dropdown2" role="tab"  data-toggle="tab" aria-controls="dropdown2" aria-expanded="false">内容4</a></li>
+								        </ul>
+							    </li>
+						    </ul>
+						    <div class="tab-content">
+							    <div role="tabpanel" class="tab-pane fade active in" id="home" >
+							        <p>内容1</p>
+							    </div>
+							    <div role="tabpanel" class="tab-pane fade" id="profile" >
+							        <p>内容2</p>
+							    </div>
+							    <div role="tabpanel" class="tab-pane fade" id="dropdown1" >
+							        <p>内容3</p>
+							    </div>
+							    <div role="tabpanel" class="tab-pane fade" id="dropdown2" >
+							        <p>内容4</p>
+							    </div>
+						    </div>
+						</div>
+					</div>
+				</div>
+
+    		</div>
+  			
+    	</div>
+    </div>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/bootstrap.js"></script>
+</html>

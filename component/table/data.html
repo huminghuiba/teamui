@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TianZuUI</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" href="../../css/bootstrap.css" media="all">
+	<link rel="stylesheet" href="../../css/bootstrap-table.min.css" media="all">
+	<style type="text/css">
+		body{padding:15px 0;}
+	</style>
+</head>
+<body>
+    <div class="container-fluid"> 
+    	<div class="row">
+    		<div class="col-md-12">
+    			<div class="panel panel-default">
+					<div class="panel-heading">
+					    <h3 class="panel-title">默认风格</h3>
+					</div>
+					<div class="panel-body">
+						<div class="fixed-table-toolbar">
+							<div class="bs-bars pull-left">
+								<div id="toolbar">
+								  <button id="button" class="btn btn-default">remove</button>
+								</div>
+							</div>
+						</div>
+					    <table id="table" data-toggle="table"
+					       data-url="https://api.github.com/users/wenzhixin/repos"
+					       data-query-params="queryParams"
+					       data-pagination="true"
+					       data-search="true"
+					       data-remove="true"
+					       data-height="500">
+					    <thead>
+					    <tr>
+					        <th data-field="state" data-checkbox="true"></th>
+					        <th data-field="name">Name</th>
+					        <th data-field="stargazers_count">Stars</th>
+					        <th data-field="forks_count">Forks</th>
+					        <th data-field="description">Description</th>
+					    </tr>
+					    </thead>
+					</table>
+					</div>
+				</div>
+
+    		</div>
+  			
+    	</div>
+    </div>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/bootstrap.js"></script>
+<script src="../../js/bootstrap-table.min.js"></script>
+<script src="../../js/bootstrap-table-zh-CN.js"></script>
+<script>
+  var $table = $('#table')
+  var $button = $('#button')
+    $button.click(function () { 	
+      var ids = $.map($table.bootstrapTable('getSelections'), function (row) {
+        return row.id
+      })
+      $table.bootstrapTable('remove', {
+        field: 'id',
+        values: ids
+      })
+    })
+</script>
+</html>
